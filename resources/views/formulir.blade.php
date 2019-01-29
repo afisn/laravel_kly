@@ -58,8 +58,8 @@
                             <div class="form-group">
                                 <label for="gender">Jenis Kelamin</label>
                                 <div class="radio">
-                                  <label class="radio-inline"><input type="radio" name="gender" >Laki-laki</label>
-                                  <label class="radio-inline"><input type="radio" name="gender">Perempuan</label>
+                                  <label class="radio-inline"><input type="radio" name="gender" value="Laki-laki" >Laki-laki</label>
+                                  <label class="radio-inline"><input type="radio" name="gender" value="Perempuan">Perempuan</label>
                                 </div>
                             </div>
                             <div class="form-group">

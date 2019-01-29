@@ -13,3 +13,6 @@
 
 Route::get('/form', 'FormController@input');
 Route::post('/proses', 'FormController@proses');
+
+
+Route::get('/detail/{namatxt}', 'FormController@isiform');
