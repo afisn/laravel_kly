@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Storage;
+use Carbon;
 use Illuminate\Http\Request;
 
 class FormController extends Controller
@@ -22,14 +24,26 @@ class FormController extends Controller
      'alamat' => 'required'
    ]);
     
-    // $fileInForm = 'doc';
-    // $file = $request->file($fileInForm);
-    $mytime = \Carbon\Carbon::now();
-    echo $mytime->toDateTimeString();
+    //memasukkan request ke array
+    $data = [];
+    $data['nama'] = $request->get('nama');
+    $data['email'] = $request->get('email');
+    $data['tanggal'] = $request->get('tanggal');
+    $data['telepon'] = $request->get('telepon');
+    $data['gender'] = $request->get('gender');
+    $data['alamat'] = $request->get('alamat');
     
-    // $thefile = \File::get($image);
-    $file_name = $request->nama . '-' . $mytime . '.txt';
-    \Storage::disk('local')->put('file', $file_name);
+    $comma_separated = implode(", ", $data);
+    // $file = $request->all();
+    // foreach ($request->all() as $isi){
+    //   $file = array($isi);
+    // }
+
+    $mytime = \Carbon\Carbon::now();
+    
+    //memasukkan isi form kedalam bentuk txt dengan nama file custom
+    $file_name = $request->nama . '-' . time() . '.txt';
+    Storage::put($file_name, $comma_separated);
 
     return view('proses',['data' => $request]);
   }

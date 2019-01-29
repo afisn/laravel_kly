@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Malas Ngoding - Tutorial Laravel #18 : Membuat Form Validasi Pada Laravel</title>
+    <title>Formulir (Simple CRUD)</title>
     
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -15,13 +15,9 @@
         <div class="col-lg-6">
             <div class="card mt-5">
                 <div class="card-body">
-                    <h3 class="my-4">Data Yang Di Input : </h3>
-                  
-                            @foreach ($data->all() as $isi)
-                            {{ $isi }}
-                            @endforeach
-                        
-<!-- 
+                    <h3 style="text-align:center"class="my-4">Selamat! Data berhasil dimasukkan </h3>
+                    <!-- <h4 class="my-4">Data yang dimasukkan berupa : </h4>
+
                     <table class="table table-bordered table-striped">
                         <tr>
                             <td style="width:150px">Nama</td>
@@ -49,7 +45,7 @@
                         </tr>
                     </table>
  -->
-                    <a href="/input" class="btn btn-primary">Kembali</a>
+                    <a href="/form" class="btn btn-primary">Kembali</a>
                 </div>
             </div>
         </div>
