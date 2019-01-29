@@ -2,7 +2,7 @@
 First project with laravel framework
 -Project CRUD Form 
 
-#cara install framework laravel
+# cara install framework laravel
 1.install composer, yang jadi penyambung untuk install laravel 
 2.karena pakai xampp, maka rubah file di folder apache -> httpd-vhost.conf
 VirtualHost for LARAVEL.DEV
